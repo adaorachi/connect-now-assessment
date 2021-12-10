@@ -1,30 +1,47 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <NavBar :navLinks="navLinks" />
 </template>
+
+<script>
+import NavBar from './components/NavBar.vue';
+
+export default {
+  components: {
+    NavBar
+  },
+  data () {
+    return {
+      navLinks: [
+        {name: 'Video Games', route: '/', overlayText: 'Video'},
+        {name: 'Contact', route: '/contact', overlayText: 'Contact'},
+        ]
+    }
+  },
+}
+</script>
+
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: 'Mulish', sans-serif;
+  color: #c1d1e8;
+  padding: 50px;
 }
 
-#nav {
-  padding: 30px;
+h6,
+button,
+label,
+a {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+p {
+  font-size: 0.8rem;
+}
+@media (max-width: 576px) {
+  #app{
+    padding: 10px;
+  }
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
