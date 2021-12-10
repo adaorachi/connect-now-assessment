@@ -99,19 +99,19 @@ export default {
 }
 
 @media (max-width: 992px) {
-  .page-content {
+  .page_content {
     width: 70%;
   }
   .contact_form_content_upper {
     flex-direction: column;
   }
   .contact_name {
-    padding-right: 'initial';
+    padding-right: initial;
   }
 }
 @media (max-width: 576px) {
-  .page-content {
-    width: 80%;
+  .page_content {
+    width: 90%;
   }
 }
 </style>
